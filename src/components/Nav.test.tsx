@@ -84,8 +84,7 @@ describe('<Nav />', () => {
       waitFor(() => {
         expect(window.scrollY).toBeGreaterThan(0);
       });
-      // fail test on purpose to test workflow with github actions
-      expect(navElement).toHaveClass('-translate-y-full');
+      expect(navElement).not.toHaveClass('-translate-y-full');
     });
   });
 });
